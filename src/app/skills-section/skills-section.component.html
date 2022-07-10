@@ -1,0 +1,7 @@
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Technologies </h5>
+<div class="skills-section flex flex-row flex-wrap justify-center">
+    <div *ngFor="let skill of skills; trackBy: trackByFun" class="transition ease-in-out delay-150 hover:scale-110 duration-300 skill-box container rounded-lg border shadow-md bg-gray-800 border-gray-700 p-2 w-28 h-28 flex flex-col justify-center m-2">
+        <img [src]="'../../assets/icons/skills/'+ skill.link +'.svg'" class="mx-auto h-16 w-16" alt="angular">
+        <h6 class=" text-lg font-bold tracking-tight text-white text-center">{{skill.name}}</h6>
+    </div>
+</div>
