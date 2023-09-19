@@ -1,0 +1,19 @@
+.skill-section {
+  padding-left: 20px;
+  .skill-holder {
+    padding-left: 20px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 20px;
+    border-left: 1px solid #1bff80;
+    font-family: 'Courier New', Courier, monospace;
+    color: #1bff80;
+
+    .single-skill {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}

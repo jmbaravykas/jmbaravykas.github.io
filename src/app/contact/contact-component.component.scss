@@ -1,0 +1,17 @@
+.contacts-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  .single-contact {
+      font-family: 'Courier New', Courier, monospace;
+      color: #1bff80;
+      border: 3px solid #1bff80;
+      border-radius: 5px;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      text-decoration: none;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="experience-section">
+  <div class="experience-box box">
+      <div class="section-title">02. Experience</div>
+      <div class="single-experience" *ngFor="let exp of experience; trackBy: trackByFun">
+          <h3 class="experience-company">{{exp.job}}</h3>
+          <div class="experience-date">[{{exp.date}}] {{exp.company}}</div>
+          <button (click)="openModal(exp)" type="button" class="more-details">Details</button>
+      </div>
+  </div>
+</div>
+
+<app-experience-details-component *ngIf="showModal" [company]="selectedCompany" (closeModal)="closeModal()"></app-experience-details-component>

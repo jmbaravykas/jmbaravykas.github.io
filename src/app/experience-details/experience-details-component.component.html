@@ -1,0 +1,10 @@
+<div class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="close()">&times;</span>
+    <ng-container *ngIf="company">
+      <h3 class="experience-company">[{{company.company}}]<span class="experience-job">{{company.job}}</span></h3>
+      <time class="experience-date">{{company.date}}</time>
+      <p class="experience-description">{{company.description}}</p>
+    </ng-container>
+  </div>
+</div>
