@@ -19,6 +19,26 @@
   color: var(--dark);
 }
 
+::-webkit-scrollbar,
+scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover,
+scrollbar-thumb:hover {
+  background: var(--green-color);
+}
+
+::-webkit-scrollbar-thumb,
+scrollbar-thumb {
+  background: var(--green-bg);
+}
+
+::-webkit-scrollbar-track,
+scrollbar-track {
+  background: var(--dark);
+}
+
 body {
   background: var(--dark);
   color: var(--green-color);
@@ -43,33 +63,26 @@ body {
 
   .section-data {
     &.full {
-      border: 2px solid #1bff80;
+      border: 2px solid var(--green-color);
       padding: 20px;
     }
 
     &.half {
-      border-left: 2px solid #1bff80;
-      border-top: 2px solid #1bff80;
+      border-left: 2px solid var(--green-color);
+      border-top: 2px solid var(--green-color);
       padding-left: 20px;
       padding-top: 20px;
     }
   }
 }
 
-.custom-div-button {
-  &:hover {
-    background-color: #1bff80;
-    color: #05321e;
-    cursor: pointer;
-  }
-}
 
 .custom-button {
   font-family: "Courier New", Courier, monospace;
   font-size: max(1rem, 2.2vmin);
   color: var(--green-color);
   background: var(--dark);
-  border: 3px solid #1bff80;
+  border: 3px solid var(--green-color);
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
@@ -83,34 +96,6 @@ body {
     color: var(--dark);
     cursor: pointer;
   }
-}
-
-/* Style the scrollbar */
-::-webkit-scrollbar,
-scrollbar {
-  width: 10px;
-  /* Width of the scrollbar */
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover,
-scrollbar-thumb:hover {
-  background: var(--green-color);
-  /* Color of the handle on hover */
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb,
-scrollbar-thumb {
-  background: var(--green-bg);
-  /* Color of the handle */
-}
-
-/* Track */
-::-webkit-scrollbar-track,
-scrollbar-track {
-  background: var(--dark);
-  /* Color of the track */
 }
 
 .crt {

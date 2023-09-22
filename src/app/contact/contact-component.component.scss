@@ -7,17 +7,18 @@
 
   .single-contact {
       font-family: 'Courier New', Courier, monospace;
-      color: #1bff80;
-      border: 3px solid #1bff80;
+      color: var(--green-color);
+      border: 3px solid var(--green-color);
       border-radius: 5px;
       padding: 10px;
       flex-grow: 1;
       text-align: center;
       text-decoration: none;
+      width: 200px;
 
       &:hover {
-        background-color: #1bff80;
-        color: #05321e;
+        background-color: var(--green-color);
+        color: var( -green-bg);
         cursor: pointer;
       }
   }
