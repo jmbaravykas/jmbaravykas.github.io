@@ -1,0 +1,32 @@
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  padding-bottom: 10px;
+}
+
+.key {
+  width: 30%;
+  float: left;
+}
+
+.value {
+  width: 70%;
+  float: left;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .key {
+    width: 100%;
+    float: left;
+  }
+  
+  .value {
+    margin-top: 5px;
+    width: 100%;
+    float: left;
+    border-left: 1px solid var(--green-color);
+    padding-left: 10px;
+  }
+}
