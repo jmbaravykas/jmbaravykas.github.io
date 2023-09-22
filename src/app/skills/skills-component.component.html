@@ -1,8 +1,14 @@
-<div class="skill-section">
-  <div class="section-title">04. Skills</div>
-  <div class="skill-holder">
-    <ng-container *ngFor="let skill of skills; trackBy: trackByFun">
-      <span class="single-skill">{{skill}},</span>
-    </ng-container>
+<div class="section">
+  <div class="section-title">03. Skills</div>
+  <div class="section-data">
+
+    <table>
+      <tr class="row" *ngFor="let skill of skills; trackBy: trackByFun">
+        <td class="left">{{skill.section}}:</td>
+        <td class="right">{{skill.list}}</td>
+      </tr>
+    </table>
   </div>
 </div>
+
+<!-- ▪  -->

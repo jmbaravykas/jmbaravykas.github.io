@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home-component',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-component.component.scss']
 })
 export class HomeComponentComponent implements OnInit {
+
+  @Output() finished = new EventEmitter<void>();
 
   outputText: any = {
     titleText: '',
@@ -28,11 +30,11 @@ export class HomeComponentComponent implements OnInit {
   }
 
   private async initialBootUp() {
-    // await this.typeText(this.titleText, 100, 'titleText');
-    // await this.typeText(this.loadingText, 100, 'loadingText');
-    // await this.typeText(this.dotsText, 100, 'dotsText');
-    // await this.typeText(this.doneText, 100, 'doneText');
-    // this.addInput()
+    await this.typeText(this.titleText, 100, 'titleText');
+    await this.typeText(this.loadingText, 100, 'loadingText');
+    await this.typeText(this.dotsText, 100, 'dotsText');
+    await this.typeText(this.doneText, 100, 'doneText');
+    this.finished.emit();
   }
 
   private typeText(text: string, time: number, objectKey: string): Promise<void> {
@@ -47,16 +49,5 @@ export class HomeComponentComponent implements OnInit {
         }
       }, time);
     });
-  }
-
-  private addInput(): void {
-    let terminal = document.querySelector(".terminal");
-		let input = document.createElement("span");
-		input.setAttribute("id", "input");
-		input.setAttribute("contenteditable", 'true');
-    if(terminal) {
-      terminal.appendChild(input);
-      input.focus();
-    }
   }
 }

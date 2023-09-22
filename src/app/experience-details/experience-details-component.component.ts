@@ -7,6 +7,7 @@ import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@a
 })
 export class ExperienceDetailsComponentComponent implements OnInit {
   @Input() company: any = null;
+  template: any;
 
 
   @Output() closeModal = new EventEmitter<void>();

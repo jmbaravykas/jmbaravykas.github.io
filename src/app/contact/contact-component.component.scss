@@ -3,15 +3,22 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-bottom: 10px;
+  gap: 10px;
+
   .single-contact {
       font-family: 'Courier New', Courier, monospace;
       color: #1bff80;
       border: 3px solid #1bff80;
       border-radius: 5px;
       padding: 10px;
-      width: 200px;
+      flex-grow: 1;
       text-align: center;
       text-decoration: none;
+
+      &:hover {
+        background-color: #1bff80;
+        color: #05321e;
+        cursor: pointer;
+      }
   }
 }

@@ -1,1 +1,30 @@
-<p>projects-component works!</p>
+<div class="section">
+  <div class="section-title">05. Personal projects</div>
+  <div class="section-data">
+    <div class="project-holder">
+
+      <div class="single-project" *ngFor="let project of projects; trackBy: trackByFun">
+        <div class="project-holder">
+          <div class="project-tile">
+            {{project.title}}
+          </div>
+          <div class="project-image-holder">
+            <div class="color-tint"></div>
+            <img class="project-image" [src]="'../../assets/' + project.image" alt="project image" />
+          </div>
+          <div class="project-date">
+            {{project.date}}
+          </div>
+          <div class="project-short-description">
+            {{project.shortDescription}}
+          </div>
+          <div class="project-more-details" *ngIf="project.moreDetails">
+            <button class="custom-button">More Details</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

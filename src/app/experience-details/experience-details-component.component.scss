@@ -12,12 +12,16 @@
 .modal-content {
   background: #111;
   overflow: hidden;
-  font-family: sans-serif;
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid #5bf870;
+  border: 3px solid #1bff80;
+  border-radius: 5px;
   width: 80%;
-  height: 80%;
+  height: 65%;
+}
+
+.main-title {
+  line-height: 35px;
 }
 
 .close {
@@ -32,4 +36,43 @@
   color: #5bf870;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal-data {
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  height: 95%;
+}
+
+.single-project {
+  overflow-y: auto;
+}
+
+.pagination {
+  padding-top: 15px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.controll {
+  font-family: 'Courier New', Courier, monospace;
+  color: #1bff80;
+  background-color: #111;
+  border: 3px solid #1bff80;
+  border-radius: 5px;
+  padding: 10px;
+  flex-grow: 1;
+  text-align: center;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+
+  &:hover {
+    background-color: #1bff80;
+    color: #05321e;
+    cursor: pointer;
+  }
 }
