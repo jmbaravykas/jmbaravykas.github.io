@@ -9,8 +9,10 @@
             {{project.title}}
           </div>
           <div class="project-image-holder">
-            <div class="color-tint"></div>
-            <img class="project-image" [src]="'../../assets/' + project.image" alt="project image" />
+            <div class="project-image">
+              <div class="color-tint"></div>
+              <img [src]="'../../assets/' + project.image" alt="project image" />
+            </div>
           </div>
           <div class="project-date">
             {{project.date}}

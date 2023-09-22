@@ -1,14 +1,32 @@
-.skill-category {
-  display: flex;
-  flex-flow: row;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  padding-bottom: 10px;
 }
 
-.left {
-  width: 300px;
-  display: flex;
+.key {
+  width: 30%;
+  float: left;
 }
-.right {
-  text-align: left;
-  padding-left: 10px;
-  padding-bottom: 10px;
+
+.value {
+  width: 70%;
+  float: left;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .key {
+    width: 100%;
+    float: left;
+  }
+  
+  .value {
+    margin-top: 5px;
+    width: 100%;
+    float: left;
+    border-left: 1px solid var(--green-color);
+    padding-left: 10px;
+  }
 }

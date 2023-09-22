@@ -34,7 +34,6 @@
   }
 
   .project-image-holder {
-    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -42,17 +41,22 @@
   }
 
   .project-image {
-    max-width: 250px;
-  }
+    width: 250px;
+    position: relative;
 
-  .color-tint {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #1bff80;
-    mix-blend-mode: multiply;
+    img {
+      width: 250px;
+    }
+
+    .color-tint {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1bff80;
+      mix-blend-mode: multiply;
+    }
   }
 
   .project-short-description {
