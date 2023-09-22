@@ -17,11 +17,10 @@ export class HomeComponentComponent implements OnInit {
     availableCommands: ''
   };
 
-  titleText = 'Welcome to J.M.B. industries(TM) terminal';
-  loadingText = 'Loading........................';
+  titleText = 'Welcome to J.M.B. industries(TM)';
+  loadingText = 'Loading.....';
   dotsText = '.....';
   doneText = '..... Done'
-  availableCommands = 'home, help, about, experience, skills';
 
   constructor() { }
 
@@ -29,11 +28,15 @@ export class HomeComponentComponent implements OnInit {
     this.initialBootUp();
   }
 
+  trackByFun(index:number): number {
+    return index;
+  }
+
   private async initialBootUp() {
-    await this.typeText(this.titleText, 100, 'titleText');
-    await this.typeText(this.loadingText, 100, 'loadingText');
-    await this.typeText(this.dotsText, 100, 'dotsText');
-    await this.typeText(this.doneText, 100, 'doneText');
+    await this.typeText(this.titleText, 80, 'titleText');
+    await this.typeText(this.loadingText, 80, 'loadingText');
+    await this.typeText(this.dotsText, 80, 'dotsText');
+    await this.typeText(this.doneText, 80, 'doneText');
     this.finished.emit();
   }
 
