@@ -1,15 +1,46 @@
 <div class="section">
   <div class="section-title">02. Experience</div>
   <div class="section-data">
-    <div class="custom-div-button" (click)="openModal(null)">> [SEB] 2022 Jul - Present</div>
-    <div class="custom-div-button" (click)="openModal(null)">> [IBM] 2015 Jul - 2022 Jan</div>
-    <div class="custom-div-button" (click)="openModal(null)">> [ESA] 2018 Jan - 2018 Jul</div>
-    <div class="custom-div-button" (click)="openModal(null)">> [NDVF] 2015 Jun - 2022 Jan</div>
+
+    <div class="experience-entry" *ngFor="let experience of experiences; trackBy: trackByFun">
+      
+      <ng-container *ngIf="!experience.multi">
+        <div class="title-data">
+          > {{experience.company}}
+        </div>
+        <div class="description-data">
+          <div class="role-title">
+            <div class="role-name">
+              {{experience.role}}
+            </div>
+            <div class="role-date">
+              [{{experience.date}}]
+            </div>
+          </div>
+          <div class="description">
+            {{experience.description}}
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="experience.multi">
+        <div class="title-data">
+          > {{experience.company}}
+        </div>
+        <div class="description-data">
+          <ng-container *ngFor="let role of experience.roles; trackBy: trackByFun">
+            <div class="role-date-holder">
+              <div class="role-name">
+                {{role.role}}
+              </div>
+              <div class="role-date">
+                - [{{role.date}}]
+              </div>
+            </div>
+
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
   </div>
 </div>
-
-<app-experience-details-component *ngIf="showModal" [company]="selectedCompany" (closeModal)="closeModal()">
-  <ng-template>
-    <div>hello</div>
-  </ng-template>
-</app-experience-details-component>

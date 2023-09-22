@@ -8,9 +8,7 @@ import { experience } from './experience-list';
 })
 export class ExperienceComponentComponent implements OnInit {
 
-  experience = experience;
-  showModal = false;
-  selectedCompany = null;
+  experiences = experience;
 
   constructor() { }
 
@@ -19,16 +17,6 @@ export class ExperienceComponentComponent implements OnInit {
 
   trackByFun(index:number): number {
     return index;
-  }
-
-  openModal(selectedCompany: any) {
-    this.selectedCompany = selectedCompany;
-    this.showModal = true;
-  }
-
-  closeModal() {
-    this.selectedCompany = null;
-    this.showModal = false;
   }
 
 }

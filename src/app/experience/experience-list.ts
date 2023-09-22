@@ -1,53 +1,50 @@
 export const experience = [
     {
         company: 'SEB',
-        job: 'Senior Solutions Developer',
+        multi: false,
+        role: 'Senior Solutions Developer',
         date: '2022 Jul - Present',
-        description: 'AB SEB Bankas is a commercial bank in Lithuania. It is the Lithuanian subsidiary of one of the largest Swedish banks, the SEB Group',
+        description: 'Currently working o two applications for internal and external users. These applications are used to handle multiple different kind of payments.', 
+        skills: 'Cascading Style Sheets (CSS) · Web Development · Angular · JavaScript · TypeScript · Web Applications · HTML5',
         moreInfo: false,
-    },
-    {
-        company: 'IBM',
-        job: 'Application Developer',
-        date: '2018 Aug - 2022 Jan',
-        description: 'International Business Machines Corporation is an American multinational technology corporation headquartered in Armonk, New York, with operations in over 171 countries',
-        moreInfo: true,
     },
     {
         company: 'NDVF',
-        job: 'Infantry OR-3',
+        multi: false,
+        role: 'Infantry OR-3',
         date: '2015 Jun - 2022 Jan',
-        description: 'The National Defence Volunteer Forces or NDVF is a branch of the Lithuanian Armed Forces. Volunteer forces were officially established on 17 January 1991 by the law of the Supreme Council of Lithuania on the National Defence Volunteer Service providing basis for establishing Voluntary National Defence Service.',
-        moreInfo: true,
+        description: 'I started my service as an communication specialist working in support of main battle groups ensuring their communication between each other and the base. Later I moved onto working on engineering and explosives handling. Over my time in the military I have supported our country in it\'s regional defence fight agains COVID-19 and migrant crisis at the border.',
+        skills: 'Team Leadership · Training · Presentation Skills · Strategic Planning · Explosives Safety · Firearms Handling · Teamwork',
+        moreInfo: false,
     },
     {
-        company: 'European Space Agency',
-        job: 'Internship Trainee',
+        company: 'ESA',
+        multi: false,
+        role: 'Internship Trainee',
         date: '2018 Jan - 2018 Jul',
-        description: 'The European Space Agency is an intergovernmental organisation of 22 member states dedicated to the exploration of space. Established in 1975 and headquartered in Paris, ESA has a worldwide staff of about 2,200 in 2018 and an annual budget of about €7.2 billion in 2022',
-        moreInfo: true,
-    },
-    {
-        company: 'IBM',
-        job: 'Application Developer',
-        date: '2016 Feb - 2018 Jan',
-        description: 'International Business Machines Corporation is an American multinational technology corporation headquartered in Armonk, New York, with operations in over 171 countries',
+        description: 'I was working on the design, production and testing of a support software for astronauts in field activities, an “Electronic Fieldbook”. This system is able to retrieve different types of data - such as pictures, videos, audio recordings and text notes, GPS locations and scientific data - by means of hand-held devices, store them in a structured fashion and transfer relevant ones to a remote Operations Room.',
+        skills: 'JavaScript · Web Applications · Front-end Development · CSS · Requirements Gathering · Requirements Analysis · Presentation Skills · Teamwork',
         moreInfo: false,
     },
     {
         company: 'IBM',
-        job: 'Internship Trainee',
-        date: '2015 Jul - 2016 Feb',
-        description: 'International Business Machines Corporation is an American multinational technology corporation headquartered in Armonk, New York, with operations in over 171 countries',
-        moreInfo: false,
-    }
+        multi: true,
+        roles: [
+            {
+                role: 'Application Developer',
+                date: '2018 Aug - 2022 Jan'
+            },
+            {
+                role: 'Application Developer',
+                date: '2016 Feb - 2018 Jan'
+            },
+            {
+                role: 'Internship Trainee',
+                date: '2015 Jul - 2016 Feb'
+            },
+        ],
+        description: '',
+        skills: 'Angular · JavaScript · TypeScript · Web Applications · Front-end Development · Back-End Web Development · Node.js · CSS · HTML5 · Team Leadership · Consulting · Agile Application Development · Onboarding · Mentoring New Hires · Training · Requirements Gathering · Requirements Analysis · Presentation Skills · Unit Testing · Cypress · Teamwork',
+        moreInfo: false
+    },
 ];
-
-// export const moreInfoIbm = [
-//     {
-//         title: 'MIRA'
-//         position: 'team lead of front-end team, front-end developer',
-//         date: '2021 JAN - 2022 DEC',
-//         description: 'Mira is an insurance underwriting tool for MidCorp business. It allows underwriters to have an holistic view of one risk based on external data as well as internal portfolio data.'
-//     }
-// ];

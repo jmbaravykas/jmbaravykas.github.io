@@ -1,0 +1,31 @@
+.experience-entry {
+  margin-bottom: 20px;
+
+  .description-data {
+    margin-top: 5px;
+    padding-left: 1rem;
+
+    .description {
+      margin-top: 10px;
+      border-left: 1px solid var(--green-color);
+      padding-left: 10px;
+    }
+  }
+
+  .role-title {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+
+    .role-name {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.role-date-holder {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
