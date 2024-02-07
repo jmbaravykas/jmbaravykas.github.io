@@ -10,7 +10,7 @@ const PROJECTS = [
     description: 'A very short 2D demo game, made in Godot. You take a role of a lost man, who is trying to escape from a dark bunker..',
     github: null,
     technology: ['Godot', 'Aseprite'],
-    link: 'https://itch.io/embed-upload/9679162?color=333333',
+    link: 'https://holdim.itch.io/the-bunker',
     images: []
   },
   {
