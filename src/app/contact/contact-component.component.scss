@@ -18,8 +18,9 @@
 
       &:hover {
         background-color: var(--green-color);
-        color: var( -green-bg);
+        color: var(--green-bg);
         cursor: pointer;
+        font-weight: bold;
       }
   }
 }

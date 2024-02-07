@@ -28,17 +28,24 @@
           > {{experience.company}}
         </div>
         <div class="description-data">
-          <ng-container *ngFor="let role of experience.roles; trackBy: trackByFun">
+          <table class="big-screen">
+            <tr *ngFor="let role of experience.roles; trackBy: trackByFun">
+              <td> {{role.role}}</td>
+              <td> [{{role.date}}]</td>
+            </tr>
+          </table>
+
+          <div class="small-screen" *ngFor="let role of experience.roles; trackBy: trackByFun">
             <div class="role-date-holder">
               <div class="role-name">
                 {{role.role}}
               </div>
               <div class="role-date">
-                - [{{role.date}}]
+                [{{role.date}}]
               </div>
             </div>
-
-          </ng-container>
+          </div>
+          
         </div>
       </ng-container>
     </div>

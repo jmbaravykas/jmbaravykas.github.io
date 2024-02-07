@@ -29,3 +29,21 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.big-screen {
+  display: block;
+}
+
+.small-screen {
+  display: none;
+}
+
+@media only screen and (max-width: 510px) {
+  .small-screen {
+    display: block;
+  }
+
+  .big-screen {
+    display: none;
+  }
+}
