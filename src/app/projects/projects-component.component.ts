@@ -5,7 +5,7 @@ const PROJECTS = [
     title: 'The Bunker',
     image: 'bunker-door.png',
     date: '2023 December - 2024 February',
-    shortDescription: '"The Bunker" is a captivating 2D pixel art game developed with the Godot engine, immersing players in the story of a man who discovers a mysterious hatch in the forest leading to an underground bunker. In this game, players assume the role of the protagonist as they navigate through eerie depths of the bunker.',
+    shortDescription: '"The Bunker" is a captivating 2D pixel art game developed with the Godot engine, immersing players in the story of a man who discovers a mysterious hatch in the forest leading to an underground bunker. In this game, players assume the role of the protagonist as they navigate through eerie depths of the bunker. PASS: a-bunker-test-game',
     moreDetails: false,
     description: 'A very short 2D demo game, made in Godot. You take a role of a lost man, who is trying to escape from a dark bunker..',
     github: null,
