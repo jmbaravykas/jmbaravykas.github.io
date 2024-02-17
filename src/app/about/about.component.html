@@ -1,9 +1,13 @@
 <div class="section">
-    <h3 class="section-title">01. About</h3>
-    <div class="section-data full">
-        Senior Solutions Developer working at SEB. Primary working with Angular.
-        I spend my free time learning other front end technologies such as Svelte and Next, Unity and writing
-        small applications.
-        My interests include artificial intelligence, video games, robotics and space exploration.
-    </div>
+	<div class="section-left">
+		<h3 class="section-title">0{{ number }}.</h3>
+	</div>
+	<div class="section-right">
+		<h3 class="section-title">{{ SECTION.title }}</h3>
+		<div class="section-data">
+			<p *ngFor="let paragraph of SECTION.paragraphs; trackBy: trackByFun">
+				{{ paragraph }}
+			</p>
+		</div>
+	</div>
 </div>

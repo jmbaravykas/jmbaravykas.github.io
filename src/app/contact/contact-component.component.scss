@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 10px;
+  padding-bottom: 4rem;
 
   .single-contact {
       font-family: 'Courier New', Courier, monospace;
@@ -22,11 +23,5 @@
         cursor: pointer;
         font-weight: bold;
       }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .contacts-list {
-    padding-bottom: 4rem;
   }
 }

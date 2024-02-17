@@ -1,4 +1,4 @@
-.project-holder {
+.section-data {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -7,17 +7,14 @@
 }
 
 .single-project {
-  border: 3px solid var(--green-color);
-  border-radius: 5px;
-  width: 295px;
-  // height: 560px;
+  border: 2px dashed var(--green-color);
 
   .project-holder {
     padding: 20px;
     // height: 460px;
     display: flex;
     flex-flow: column;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .project-tile {
@@ -30,7 +27,9 @@
   }
 
   .project-date {
+    padding-top: 0.5rem;
     text-align: center;
+    font-weight: bold;
   }
 
   .project-image-holder {
@@ -38,14 +37,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 1rem;
   }
 
   .project-image {
-    width: 250px;
+    height: 150px;
     position: relative;
 
     img {
-      width: 250px;
+      height: 150px;
     }
 
     .color-tint {
@@ -61,11 +61,12 @@
 
   .project-short-description {
     flex-grow: 1;
+    white-space: pre-line;
   }
 
   .project-more-details {
     border-top: 1px solid var(--green-color);
-    padding-top: 10px;
+    padding-top: 1rem;
     display: flex;
     flex-flow: row;
     justify-content: center;

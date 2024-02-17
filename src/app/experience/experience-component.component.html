@@ -1,53 +1,81 @@
 <div class="section">
-  <div class="section-title">02. Experience</div>
-  <div class="section-data">
+	<div class="section-left">
+		<h3 class="section-title">0{{ number }}.</h3>
+	</div>
+	<div class="section-right">
+		<h3 class="section-title">{{ SECTION.title }}</h3>
+		<div class="section-data">
 
-    <div class="experience-entry" *ngFor="let experience of experiences; trackBy: trackByFun">
-      
-      <ng-container *ngIf="!experience.multi">
-        <div class="title-data">
-          > {{experience.company}}
-        </div>
-        <div class="description-data">
-          <div class="role-title">
-            <div class="role-name">
-              {{experience.role}}
-            </div>
-            <div class="role-date">
-              [{{experience.date}}]
-            </div>
-          </div>
-          <div class="description">
-            {{experience.description}}
-          </div>
-        </div>
-      </ng-container>
+			<div class="experience-holder" *ngFor="let experience of experiences; trackBy: trackByFun">
+				<div class="experience">
+					<div class="experience-header" [ngClass]="experience.state" (click)="toggleItem(experience)">
+						<div class="experience-header-left">
+							<div class="experience-role-name">
+								{{ experience.data.role.name }}
+							</div>
+							<div class="experience-company-long">
+								{{ experience.data.companyName.long }}
+							</div>
+						</div>
+						<div class="experience-header-right">
+							<div class="experience-role-date">
+								{{ experience.data.role.date }}
+							</div>
+							<div class="experience-company-short">
+								{{ experience.data.companyName.short }}
+							</div>
+						</div>
+					</div>
+					<div class="experience-body" [ngClass]="experience.state" [@slideInOut]="experience.state">
+						<div class="experience-description">
+							{{ experience.data.description }}
+						</div>
+						<div class="experience-contribution-list" *ngIf="experience.data.contribution">
+							Contribution
+							<div class="experience-contribution"
+								*ngFor="let contribution of experience.data.contribution; trackBy: trackByFun">
+								- {{ contribution }}
+							</div>
+						</div>
+						<div class="experience-projects-list" *ngIf="experience.data.projects">
+							<div class="experience-project" *ngFor="let project of experience.data.projects; trackBy: trackByFun">
+								<button class="custom-button" (click)="toggleModal(project)">{{ project.title }}</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-      <ng-container *ngIf="experience.multi">
-        <div class="title-data">
-          > {{experience.company}}
-        </div>
-        <div class="description-data">
-          <table class="big-screen">
-            <tr *ngFor="let role of experience.roles; trackBy: trackByFun">
-              <td> {{role.role}}</td>
-              <td> [{{role.date}}]</td>
-            </tr>
-          </table>
 
-          <div class="small-screen" *ngFor="let role of experience.roles; trackBy: trackByFun">
-            <div class="role-date-holder">
-              <div class="role-name">
-                {{role.role}}
-              </div>
-              <div class="role-date">
-                [{{role.date}}]
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </ng-container>
-    </div>
-  </div>
+<div class="modal-container" *ngIf="isModalVisible" [ngClass]="isModalVisible ? 'show': ''" (click)="toggleModal(null)">
+	<div class="modal" (click)="$event.stopPropagation()">
+		<div class="modal-header">
+			<h3 class="project-title">{{ activeProject?.title }}</h3>
+			<button class="custom-close-button" (click)="toggleModal(null)">X</button>
+		</div>
+		<div class="modal-body">
+			<div class="project-role-date">
+				<div class="project-role">
+					{{ activeProject?.role }}
+				</div>
+				<div class="project-date">
+					{{ activeProject?.date }}
+				</div>
+			</div>
+			<div class="project-scroll-holder">
+				<div class="project-description">
+					{{ activeProject?.description }}
+				</div>
+				<div class="project-contributions">
+					Contribution
+					<div class="project-contribution" *ngFor="let contribution of activeProject?.contribution; trackBy: trackByFun">
+						- {{ contribution }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

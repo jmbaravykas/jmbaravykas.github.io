@@ -1,0 +1,8 @@
+<div class="title-section">
+    <h1 class="name">
+        {{ text.name }}
+    </h1>
+    <h3 class="title" *ngFor="let title of text.titles; trackBy: trackByFun">
+        {{ title }}
+    </h3>
+</div>

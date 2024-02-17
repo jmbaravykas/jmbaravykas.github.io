@@ -1,49 +1,168 @@
-.experience-entry {
-  margin-bottom: 20px;
+.experience-holder {
+	.experience {
+		padding-bottom: 0.5rem;
 
-  .description-data {
-    margin-top: 5px;
-    padding-left: 1rem;
+		.experience-header {
+			border: 2px dashed var(--green-color);
+			padding: 0.5rem;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
 
-    .description {
-      margin-top: 10px;
-      border-left: 1px solid var(--green-color);
-      padding-left: 10px;
-    }
-  }
+			.experience-role-name,
+			.experience-role-date {
+				font-weight: bold;
+			}
 
-  .role-title {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
+			.experience-header-right {
+				text-align: right;
+			}
 
-    .role-name {
-      margin-right: 1rem;
-    }
-  }
+			&:hover {
+				background-color: var(--green-color);
+				color: var(--dark);
+				cursor: pointer;
+			}
+
+			&.out {
+				border: 2px solid var(--green-color);
+			}
+		}
+
+		.experience-body {
+			margin-top: 0.5rem;
+			border-left: 2px dashed transparent;
+			border-right: 2px dashed transparent;
+			padding: 0.5rem;
+			padding-top: 0;
+			display: none;
+
+			&.out {
+				display: block;
+				border-left: 2px dashed var(--green-color);
+				border-right: 2px dashed var(--green-color);
+				border-bottom: 2px dashed var(--green-color);
+			}
+
+			.experience-contribution-list {
+				margin-top: 0.5rem;
+
+				.experience-contribution {
+					margin-left: 1rem;
+				}
+			}
+
+			.experience-projects-list {
+				margin-top: 0.5rem;
+				padding-top: 0.5rem;
+				border-top: 1px solid var(--green-color);
+				display: flex;
+				flex-flow: row;
+				flex-wrap: wrap;
+				gap: 1rem 1rem;
+
+
+			}
+		}
+	}
+
+	@media only screen and (max-width: 510px) {
+		.experience {
+			.experience-header {
+				.experience-company-long {
+					display: none;
+				}
+
+				.experience-role-date {
+					font-weight: normal;
+				}
+
+				.experience-header-right {
+					font-weight: normal;
+					text-align: left;
+				}
+			}
+		}
+	}
 }
 
-.role-date-holder {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+.modal-container {
+	display: flex;
+	flex-flow: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
 
-.big-screen {
-  display: block;
-}
+	&.show {
+	  opacity: 1;
+	  visibility: visible;
+	  transition: opacity 0.3s ease-in-out, visibility 0s;
+	}
 
-.small-screen {
-  display: none;
-}
+	.modal {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		height: calc(100vh - 2rem);
+		background: var(--dark);
+		padding: 1rem;
+		border: 2px solid var(--green-color);
+		width: 70%;
+		max-width: 600px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 
-@media only screen and (max-width: 510px) {
-  .small-screen {
-    display: block;
-  }
+		display: flex;
+		flex-flow: column;
+		flex-wrap: nowrap;
+		overflow: hidden;
 
-  .big-screen {
-    display: none;
-  }
+		.modal-header {
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+
+			.project-close {
+				 &:hover {
+					cursor: pointer;
+				 }
+			}
+		}
+
+		.modal-body {
+
+			.project-role-date {
+				display: flex;
+				flex-flow: row;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				font-weight: bold;
+				border: 2px dashed var(--green-color);
+				padding: 0.5rem;
+				margin-bottom: 1rem;
+			}
+
+			.project-scroll-holder {
+				overflow: auto;
+				height: calc(100vh - 200px);
+			}
+
+			.project-contributions {
+				margin-top: 0.5rem;
+
+				.project-contribution {
+					margin-left: 1rem;
+				}
+			}
+		}
+	}
 }
