@@ -61,8 +61,13 @@
 				flex-flow: row;
 				flex-wrap: wrap;
 				gap: 1rem 1rem;
+			}
 
-
+			.experience-project {
+				flex-grow: 1;
+				button {
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -113,7 +118,7 @@
 	.modal {
 		margin-top: 1rem;
 		margin-bottom: 1rem;
-		height: calc(100vh - 2rem);
+		// height: calc(100vh - 2rem);
 		background: var(--dark);
 		padding: 1rem;
 		border: 2px solid var(--green-color);
@@ -153,7 +158,7 @@
 
 			.project-scroll-holder {
 				overflow: auto;
-				height: calc(100vh - 200px);
+				height: 60vh;
 			}
 
 			.project-contributions {
