@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
+import { TitleComponent } from './title/title.component';
 import { AboutComponent } from './about/about.component';
 import { ExperienceComponentComponent } from './experience/experience-component.component';
 import { HomeComponentComponent } from './home/home-component.component';
@@ -14,6 +15,7 @@ import { EducationComponentComponent } from './education/education-component.com
 @NgModule({
   declarations: [
     AppComponent,
+    TitleComponent,
     AboutComponent,
     ExperienceComponentComponent,
     HomeComponentComponent,

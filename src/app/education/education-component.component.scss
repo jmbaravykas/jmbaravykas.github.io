@@ -1,0 +1,40 @@
+.section-data {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 10px;
+
+  .single-education {
+    border: 2px dashed var(--green-color);
+    width: 100%;
+
+    .education-holder {
+      padding: 20px;
+      display: flex;
+      flex-flow: column;
+
+      .education-degree {
+        white-space: nowrap;
+        width: 100%;
+        padding-bottom: 10px;
+        font-weight: bold;
+        text-align: center;
+        border-bottom: 1px solid var(--green-color);
+      }
+
+      .education-title,
+      .education-date,
+      .education-place {
+        padding-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .single-education {
+      width: 500px;
+    }
+  }
+}

@@ -48,7 +48,21 @@ body {
 }
 
 .section {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  .section-left {
+    margin-right: 0.25rem;
+  }
+
+  .section-right {
+    flex-grow: 1;
+
+    .section-title {
+      border-bottom: 2px solid var(--green-color);
+    }
+  }
 
   .section-title {
     display: flex;
@@ -57,25 +71,9 @@ body {
     position: relative;
     white-space: nowrap;
     width: 100%;
-    margin-bottom: 10px;
     font-weight: bold;
   }
-
-  .section-data {
-    &.full {
-      border: 2px solid var(--green-color);
-      padding: 20px;
-    }
-
-    &.half {
-      border-left: 2px solid var(--green-color);
-      border-top: 2px solid var(--green-color);
-      padding-left: 20px;
-      padding-top: 20px;
-    }
-  }
 }
-
 
 .custom-button {
   font-family: "Courier New", Courier, monospace;
@@ -95,6 +93,30 @@ body {
     background-color: var(--green-color);
     color: var(--dark);
     cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+.custom-close-button {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  height: 2rem;
+  width: 2rem;
+  color: var(--green-color);
+  background: var(--dark);
+  border: 3px solid var(--green-color);
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  animation: textShadow 4s infinite;
+  text-shadow: 0 0 5px #c8c8c8;
+
+  &:hover {
+    background-color: var(--green-color);
+    color: var(--dark);
+    cursor: pointer;
+    font-weight: bold;
   }
 }
 
@@ -122,14 +144,14 @@ body {
       rgba(18, 16, 16, 0) 50%,
       rgba(0, 0, 0, 0.25) 50%);
   background-size: 100% 8px;
-  z-index: 2;
+  z-index: 1080;
   pointer-events: none;
 }
 
 .scanline {
   width: 100%;
   height: 100px;
-  z-index: 8;
+  z-index: 1090;
   background: linear-gradient(0deg,
       rgba(0, 0, 0, 0) 0%,
       rgba(255, 255, 255, 0.2) 10%,
@@ -143,8 +165,8 @@ body {
 .terminal {
   position: relative;
   height: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   overflow-y: auto;
   overflow-x: hidden;
   word-break: break-word;
@@ -159,6 +181,13 @@ body {
     width: 1400px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .terminal {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 

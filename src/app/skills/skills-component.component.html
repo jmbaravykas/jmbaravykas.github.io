@@ -1,11 +1,14 @@
 <div class="section">
-  <div class="section-title">03. Skills</div>
-  <div class="section-data">
-    <div class="row" *ngFor="let skill of skills; trackBy: trackByFun">
-      <div class="key">{{skill.section}}:</div>
-      <div class="value">{{skill.list}}</div>
+  <div class="section-left">
+		<h3 class="section-title">0{{ number }}.</h3>
+	</div>
+	<div class="section-right">
+    <h3 class="section-title">{{ SECTION.title }}</h3>
+    <div class="section-data">
+      <div class="row" *ngFor="let skill of SECTION.skills; trackBy: trackByFun">
+        <div class="key">{{skill.section}}</div>
+        <div class="value">{{skill.list}}</div>
+      </div>
     </div>
-  </div>
+	</div>
 </div>
-
-<!-- ▪  -->
